@@ -1,0 +1,23 @@
+#Provide the apache version and configuration lines to be changed 
+
+80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+
+# Apache Version
+Apache httpd 2.4.7 
+
+# Configuration file change(Hint: the change has to be made in /etc/apache2/conf-enabled/security.conf)
+
+1- 
+#ServerTokens 
+#ServerTokens OS   (Commented )
+#ServerTokens Full
+ServerTokens Prod ( New line added)
+
+ServerSignature Off (UNcommented)
+#ServerSignature On (Commented)
+2- Save file 
+3- sudo service apache2 restart

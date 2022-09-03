@@ -1,0 +1,25 @@
+# Best Practices for Securing Remote Login Process and Password Management in the organization
+1- Change Default Options 
+Never install or configure new program or application with the default options
+They are common knowledge in most environments so it can be used as advantage for attacker.
+like : Change default port , Disable root login and  Limiting SSH access for specific users greatly enhances security.
+
+2- Enforcement users' passwords to be +12 uncommon Characters to make Bruteforce attacks as impossible as it could be.
+
+3- Configure second factor authentication for SSH:
+That will ensure the system admins any successful login is more than single credential
+which is more secure than a password or SSH key alone.
+
+4- Authenticate clients using SSH certificates:
+Although SSH key-based authentication is a better alternative to passwords
+SSH certs secure the login process by using public keys while also providing 
+a certificate to verify each key’s identity. 
+OpenSSH has a built-in way to generate certificates using ssh-keygen
+
+5- Implement whitelist for firewalls:
+enable only the trusted connections and destinations you already know 
+and block/drop all other attempts.
+
+6- Rotational passwords enforcement
+Make sure to make an expire cycle for passwords created on the system 
+to enforce users to change them every period.
