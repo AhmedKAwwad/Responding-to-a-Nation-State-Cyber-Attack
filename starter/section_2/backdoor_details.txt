@@ -1,7 +1,7 @@
 # Provide the backdoor entries created by the nation state attackers. 
 
-# Rouge Username
-clamav
+# Rouge Username: darklord
+
 
 # Backdoor process name
 feshclam (PID 2325)
